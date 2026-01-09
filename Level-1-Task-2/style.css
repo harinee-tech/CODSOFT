@@ -1,0 +1,238 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #1f1f1f;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #ffffff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.navbar nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333333;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #636363;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 50px;
+  background: #ffffff;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+.hero-text button {
+  padding: 14px 35px;
+  border-radius: 25px;
+  border: none;
+  background: #1f1f1f;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.hero-text button:hover {
+  transform: scale(1.05);
+  background: #636363;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* FEATURES */
+.feature-card {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  background: #f0f0f0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-icon {
+  width: 100px;           /* bigger, visible size */
+  height: 100px;
+  object-fit: contain;     /* maintain aspect ratio */
+  margin-bottom: 25px;    /* spacing below icon */
+  transition: transform 0.3s;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);  /* subtle zoom on hover for premium effect */
+}
+
+
+/* PROJECTS */
+.projects {
+  padding: 80px 50px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.project-card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* PRICING */
+.pricing {
+  padding: 80px 50px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.price-box {
+  padding: 30px;
+  border-radius: 15px;
+  background: #ffffff;
+  border-top: 5px solid #1f1f1f;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.price-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.price-box h3 { color: #000000; }
+.price-box .price { font-size: 28px; margin: 10px 0; }
+
+.price-box button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #1f1f1f;
+  color: white;
+  cursor: pointer;
+}
+
+.price-box button:hover {
+  background: #636363;
+}
+
+/* CONTACT */
+.contact {
+  padding: 70px 50px;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+.contact button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #1f1f1f;
+  color: white;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #636363;
+}
+
+/* FOOTER */
+.footer {
+  background: #ffffff;
+  padding: 30px;
+  text-align: center;
+  color: #636363;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    margin-top: 30px;
+  }
+}
